@@ -2,126 +2,118 @@
 export const contractAddress = "0x6A4737FDa9c0c48d3666B94166c13669fe41Ae87"
 export const abi = [
   {
-    inputs: [
-      { internalType: "address", name: "priceFeed", type: "address" }
-    ],
-    stateMutability: "nonpayable",
-    type: "constructor"
-  },
-  {
-    inputs: [],
-    name: "FundMe__NotOwner",
-    type: "error"
-  },
-  {
-    inputs: [],
-    name: "MINIMUM_USD",
-    outputs: [
+    "type": "constructor",
+    "inputs": [
       {
-        internalType: "uint256",
-        name: "",
-        type: "uint256"
+        "name": "priceFeed",
+        "type": "address",
+        "internalType": "address"
       }
     ],
-    stateMutability: "view",
-    type: "function"
+    "stateMutability": "nonpayable"
   },
   {
-    inputs: [],
-    name: "cheaperWithdraw",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
+    "type": "fallback",
+    "stateMutability": "payable"
   },
   {
-    inputs: [],
-    name: "fund",
-    outputs: [],
-    stateMutability: "payable",
-    type: "function"
+    "type": "receive",
+    "stateMutability": "payable"
   },
   {
-    inputs: [
+    "type": "function",
+    "name": "MINIMUM_USD",
+    "inputs": [],
+    "outputs": [
       {
-        internalType: "address",
-        name: "fundingAddress",
-        type: "address"
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    name: "getAddressToAmountFunded",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256"
-      }
-    ],
-    stateMutability: "view",
-    type: "function"
+    "stateMutability": "view"
   },
   {
-    inputs: [
+    "type": "function",
+    "name": "addressToAmountFunded",
+    "inputs": [
       {
-        internalType: "uint256",
-        name: "index",
-        type: "uint256"
+        "name": "",
+        "type": "address",
+        "internalType": "address"
       }
     ],
-    name: "getFunder",
-    outputs: [
+    "outputs": [
       {
-        internalType: "address",
-        name: "",
-        type: "address"
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    stateMutability: "view",
-    type: "function"
+    "stateMutability": "view"
   },
   {
-    inputs: [],
-    name: "getOwner",
-    outputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address"
-      }
-    ],
-    stateMutability: "view",
-    type: "function"
+    "type": "function",
+    "name": "fund",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "payable"
   },
   {
-    inputs: [],
-    name: "getPriceFeed",
-    outputs: [
+    "type": "function",
+    "name": "funders",
+    "inputs": [
       {
-        internalType: "contract AggregatorV3Interface",
-        name: "",
-        type: "address"
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    stateMutability: "view",
-    type: "function"
-  },
-  {
-    inputs: [],
-    name: "getVersion",
-    outputs: [
+    "outputs": [
       {
-        internalType: "uint256",
-        name: "",
-        type: "uint256"
+        "name": "",
+        "type": "address",
+        "internalType": "address"
       }
     ],
-    stateMutability: "view",
-    type: "function"
+    "stateMutability": "view"
   },
   {
-    inputs: [],
-    name: "withdraw",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
+    "type": "function",
+    "name": "getVersion",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "i_owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "withdraw",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "error",
+    "name": "FundMe__NotOwner",
+    "inputs": []
   }
 ]
